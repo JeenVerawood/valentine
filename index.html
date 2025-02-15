@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h1 id="title">Happy Valentine's Day! 💖</h1>
+        <span>< ย้อนหลัง ></span>
+    </div>
+    <div class="flower">
+        <h1 id="click">กดเพื่อรับของขวัญ👆🏼</h1>
+        <div id="password">
+            <div class="password-block">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+                <input type="text" maxlength="1">
+            </div>
+            <p> เช่น 00  02  67 </p>
+            <button onclick="checkPassword()">ยิืนยัน</button>
+            <p id="message"></p>
+        </div>
+        <img id="flower-image" src="./img2.png" alt="ดอกไม้" style="display: none;">
+        <p id="flower-text" style="display: none;">ถึงเค้าไม่มีดอกไม้จริงให้ แต่เอาแบบนี้ไปก่อนนะ รับรองไม่มีวันเหี่ยวแน่นอน 💖</p>
+        <p id="slide"> เลื่อนลงต่อสิ</p>
+    </div>
+    <div class="story">
+       <div class="one">
+            <h3>ครบรอบ 1 เดือน</h3>
+            <div class="onemonth">
+                <img class="onemonth" src="./m1.jpeg" alt="">
+            </div>
+       </div>
+        <div class="one">
+            <h3>ครบรอบ 2 เดือน</h3>
+            <div class="onemonth">
+                <img class="onemonth" src="./m2.jpeg" alt="">
+            </div>
+        </div>
+        <div class="two">
+            <h3>ครบรอบ 3 เดือน</h3>
+            <div class="onemonth">
+                <img class="onemonth" src="./m3.jpeg" alt="">
+            </div>
+        </div>
+        <div class="one">
+            <h3>ครบรอบ 4 เดือน</h3>
+            <div class="onemonth">
+                <img class="onemonth" src="./m4.jpeg" alt="">
+
+            </div>
+        </div>
+        <div class="one">
+            <h3>ครบรอบ 5 เดือน</h3>
+            <div class="onemonth">
+                <img class="onemonth" src="./m5.jpeg" alt="">
+
+            </div>
+        </div>
+        <div class="one">
+            <h3>ครบรอบ 6 เดือน</h3>
+            <div class="onemonth">
+                <img class="onemonth" src="./m6.jpeg" alt="">
+
+            </div>
+        </div>
+
+    </div>
+    <div class="sss">
+        <a style="text-decoration: none ; color: #813131;" href="./txt.html">
+            <img class="imgsss" src="./Lovepik_com-400326050-envelope-filling.png" alt="">
+            <p>จดหมายจาก</p>
+            <h3>นาย วีรวุฒิ<h3>
+        </a>
+
+    </div>
+
+
+    <script>
+        document.getElementById("click").addEventListener("click", function() {
+            document.getElementById("password").style.display = "block";
+            document.getElementById("click").innerText = "ใส่รหัสวันครบรอบ";
+        });
+      
+        function checkPassword() {
+            let inputs = document.querySelectorAll(".password-block input");
+            let enteredPassword = "";
+            inputs.forEach(input => enteredPassword += input.value);
+
+            if (enteredPassword === "260767") {
+                document.getElementById("message").style.color = "green";
+                document.getElementById("message").textContent = "ถูกต้อง!";
+                document.getElementById("flower-image").style.display = "block";
+                document.getElementById("flower-text").style.display = "block";
+                document.getElementById("password").style.display = "none";
+                document.getElementById("click").innerText = "เห็นนบ่นว่าอยากได้นักนี้";
+                document.getElementById("slide").style.display= "block";
+
+            } else {
+                document.getElementById("message").style.color = "red";
+                document.getElementById("message").textContent = "ผิดไม่รักกันแล้วนิ";
+                document.getElementById("flower-image").style.display = "none";
+                document.getElementById("flower-text").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
