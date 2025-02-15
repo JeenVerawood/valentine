@@ -2,9 +2,7 @@
     font-family: "Noto Sans Thai", serif;
     font-style: normal;
 }
-body, html {
-    overflow-x: hidden;
-}
+
 
 body {
     height: 100vh;
